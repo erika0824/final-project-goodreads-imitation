@@ -8,7 +8,7 @@ import TAORITR from './images/TAORITR.jpg';
 import THITCS from './images/THITCS.jpg';
 import Verity from './images/Verity.jpg';
 import WTCS from './images/WTCS.jpg';
-
+import TGC from './images/TGC.jpg';
 
 export const BOOKS = [
     {
@@ -93,7 +93,7 @@ export const BOOKS = [
     },
     {
         id: 11,
-        cover: null,
+        cover: TGC,
         title: 'The  Golden Couple',
         author: 'Sarah Pekkanen',
         hasRead: true,

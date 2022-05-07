@@ -6,7 +6,7 @@ function BookShelves({ booksList, bookShelves, deleteBook }) {
 
   return (
     <>
-      <div className="m-5">
+      <div className="container m-5">
         {bookShelves.map(bookShelf => (
           <div key={bookShelf.id}>
             <BookShelf booksList={booksList.filter((x) => x.shelves === bookShelf.name)} name={bookShelf.name} bookShelves={bookShelves} deleteBook={deleteBook} />

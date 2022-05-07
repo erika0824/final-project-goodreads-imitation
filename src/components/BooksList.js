@@ -5,14 +5,15 @@ import { Table } from 'react-bootstrap';
 
 
 
-function BooksList({ booksList, deleteBook, bookShelves }) {
+function BooksList({ booksList, deleteBook }) {
   return (
     <>
       <h1>LIBRARY</h1>
       <div className="row d-flex flex-wrap" >
-        <Table responsive="xl" hover>
+        <Table responsive="xl">
           <thead>
             <tr>
+              <th>Cover</th>
               <th>Title</th>
               <th>Author</th>
               <th>Rating</th>
@@ -24,10 +25,8 @@ function BooksList({ booksList, deleteBook, bookShelves }) {
             <Book
               book={book}
               key={book.id}
-              // bookId={book.id}
               booksList={booksList}
               deleteBook={deleteBook}
-
             />
           ))}
 

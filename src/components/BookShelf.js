@@ -7,9 +7,10 @@ function BookShelf({ booksList, deleteBook, name }) {
     return (
         <div className="col m-5">
             <h1>{name}</h1>
-            <Table responsive="xl" hover>
+            <Table responsive="xl">
                 <thead>
                     <tr>
+                        <th>Cover</th>
                         <th>Title</th>
                         <th>Author</th>
                         <th>Rating</th>

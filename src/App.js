@@ -53,9 +53,9 @@ function App() {
 
   return (
     <>
-    <Navbar bg="dark" variant="dark">
-        <Navbar.Brand as={NavLink} to="/" >Erika's Library</Navbar.Brand>
-        <Nav className="me-auto">
+    <Navbar>
+        <Navbar.Brand as={NavLink} to="/" className="ms-5">Erika's Library</Navbar.Brand>
+        <Nav >
             <Nav.Link as={NavLink} to="/" >HOME</Nav.Link>
             <Nav.Link as={NavLink} to="/bookshelves" >BOOKSHELVES</Nav.Link>
             <Nav.Link as={NavLink} to="/books" >BOOKS</Nav.Link>

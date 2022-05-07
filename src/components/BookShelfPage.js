@@ -3,7 +3,7 @@ import BookShelf from './BookShelf';
 import { useParams } from 'react-router-dom';
 
 
-function BookShelfPage({ booksList, bookShelves, deleteBook }) {
+function BookShelfPage({ booksList, bookShelves}) {
     
     const params = useParams();
     const shelfId = params.shelfId
@@ -11,7 +11,11 @@ function BookShelfPage({ booksList, bookShelves, deleteBook }) {
     const foundBooks = booksList.filter((x) => x.shelves === foundShelf.name)
 
     return (
-        <BookShelf bookShelves={foundShelf} booksList={foundBooks} />
+        <div className="container m-5">
+        <h1 className="ms-5">{foundShelf.name}</h1>
+         <BookShelf bookShelves={foundShelf} booksList={foundBooks} />
+        </div>
+       
     )
 }
 

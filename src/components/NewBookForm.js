@@ -13,7 +13,6 @@ function NewBookForm({ addBook }) {
     const onShelf = (event) => setShelf(event.target.value)
 
 
-
     const onButtonClick = (event) => {
         event.preventDefault();
         const newBook = {
@@ -21,10 +20,22 @@ function NewBookForm({ addBook }) {
             author: newAuthor,
             shelves: shelf,
         }
-        addBook(newBook);
-        setNewTitle('');
-        setNewAuthor('');
-        setShelf(event.target.value = '');
+        if (newTitle === '' || newAuthor === '') {
+            alert('A new book could not be created. Title and/or author is invalid');
+            setNewTitle('');
+            setNewAuthor('');
+            setShelf(event.target.value = '');
+        } else if (shelf === '') {
+            alert('Please choose a shelf for your new book');
+            setNewTitle('');
+            setNewAuthor('');
+            setShelf(event.target.value = '');
+        } else {
+            addBook(newBook);
+            setNewTitle('');
+            setNewAuthor('');
+            setShelf(event.target.value = '');
+        }    
     }
 
     return (
@@ -43,7 +54,7 @@ function NewBookForm({ addBook }) {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Want to Read" value={'Want to Read'} onChange={onShelf} />
                 </Form.Group>
-                <Button variant="dark" type="submit" onClick={onButtonClick}>
+                <Button variant="light border-dark" type="submit" onClick={onButtonClick}>
                     Add Book
                 </Button>
             </Form>

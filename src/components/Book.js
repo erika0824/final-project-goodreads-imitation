@@ -7,13 +7,14 @@ export default function Book({ book, deleteBook }) {
 
   return (
     <>
-      <tbody>
+      <tbody className="border border-light" >
         <tr>
+          <td><img src={book.cover}></img></td>
           <td>{book.title}</td>
           <td>{book.author}</td>
           <td>{<StarRating />}</td>
           <td>{book.shelves}</td>
-          <td><Button variant="outline-danger" onClick={() => deleteBook(book.id)}>X</Button>{' '}</td>
+          <td><Button variant="border-color: $border" onClick={() => deleteBook(book.id)}>X</Button>{' '}</td>
         </tr>
       </tbody>
     </>

@@ -3,7 +3,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
-    background: black;
+    background: #F4F1EA;
     color: white;
 }
 
@@ -15,11 +15,39 @@ nav-links {
     list-style: none;
 }
 
+.navbar-light .navbar-brand {
+    color: #382110;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: #80604a;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #382110;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #80604a;
+}
+
+h1 {
+    color: #00635d;
+}
+
+h3 {
+    font-size: 16px;
+}
 .links {
-    color: rgb(5, 118, 105);
-    
+    color: #00635d;
+    text-decoration: none;
 }
 .links:hover {
     color: rgb(3, 207, 183);
-    
 }
+
+img {
+    height: 100px;
+}
+
+
